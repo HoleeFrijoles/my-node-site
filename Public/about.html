@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/info">FAQ</a>
+    <nav class="navbar">
+        <a href="/"><img class="logo" src="logo.png"></a>
+        <br>
+        <div class="hamburger" onclick="toggleMenu()">
+            <img class="menu" src="menu.png">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/info">FAQ</a></li>
+        </ul>
     </nav>
-
+    
     <hr>
 
     <h1>About Me</h1>
 
-    <p>This is where you can learn about me!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 
     <footer>No way! You found this! I'm so proud!</footer>
 </body>

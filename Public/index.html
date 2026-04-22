@@ -3,24 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/info">FAQ</a>
+    <!-- I am using REM instead of pixels so the font size will adapt to the size of the screen its on.  -->
+    <nav class="navbar">
+        <a href="/"><img class="logo" src="logo.png"></a>
+        <br>
+        <div class="hamburger" onclick="toggleMenu()">
+            <img class="menu" src="menu.png">
+        </div>
+        <ul class="nav-links">
+            <li class="header"><a href="/">Home</a></li>
+            <li class="header"><a href="/about">About</a></li>
+            <li class="header"><a href="/contact">Contact</a></li>
+            <li class="header"><a href="/info">FAQ</a></li>
+        </ul>
     </nav>
 
     <hr>
 
-    <h1>Homepage</h1>
+    <h1 class="header">Homepage</h1>
 
-    <p>This is my homepage. Welcome to my website!</p>
+    <p class="content">This is my homepage. Welcome to my website!</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/GABRIEL_VELLA_vs_ROMINHO_51.jpg">
+    <img class="home" src="https://upload.wikimedia.org/wikipedia/commons/2/22/GABRIEL_VELLA_vs_ROMINHO_51.jpg">
 
-    <footer>No way! You found this! I'm so proud!</footer>
+    <footer class="content">No way! You found this! I'm so proud!</footer>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        const press = document.querySelector('li');
+
+        press.addEventListener('click', function() {
+            press.classList.toggle('nav');
+        });
+    </script>
 </body>
 </html>
