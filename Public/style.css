@@ -1,6 +1,17 @@
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --main-font: "Montserrat", sans-serif;
+    --spacing: 16px
+}
+
 body {
-    color:white;
-    background-color:black;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    font-family: var(--main-font);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 li a:link{
@@ -12,43 +23,47 @@ ul{
 }
 
 .header {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--main-font);
   font-optical-sizing: auto;
-  font-weight: 900;
+  font-weight: 650;
   font-style: normal;
+  font-size: 2em;
 }
 
-
-.content> {
+/* .content {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
-
+} */
 
 html {
   font-size: clamp(1em, var(--base-font-size, 16px), 1.25em);
-  @media (width > 30em) { --base-font-size: 18px; }
-  @media (width > 45em) { --base-font-size: 20px; }
+  @media (width > 30em) { --base-font-size: 1.25rem; }
+  @media (width > 45em) { --base-font-size: 1.5rem; }
 }
 
-/* @keyframes marquee {
-  from { transform: translateY(0%); }
-  to   { transform: translateY(-400%); }
+ @keyframes marquee {
+  from{ transform: translateY(0%); }
+  to{ transform: translateY(-25%); }
 }
 
-.nav {
+/* .nav {
     animation: marquee 0.25s linear 1;
     white-space: nowrap;
 } */
 
 li a:visited{
-    color:white;
+    color:var(--secondary-color);
 }
 
 li a:hover{
-    color:lightgrey;
+    color:rgb(146, 146, 146);
+}
+
+.link:hover {
+    animation: marquee 1s linear 1;
+    transform: translateY(-15px);
 }
 
 menu {
@@ -59,7 +74,7 @@ menu {
     width:100px;
 }
 
-img.home{
+img{
     width:100vw;
     opacity: 50%;
 }

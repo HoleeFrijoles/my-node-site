@@ -1,3 +1,21 @@
+<!--
+TYPOGRAPHY:
+- I chose montserrat because i liked the sleek geometric modern look.
+- I like the way the fonts look lsightly different just because of the weight even though they are the same
+- i used 400 for the body stuff and 650 for the header so they stand out but arent too bulky
+- The font should shrink and grow with the window size
+ 
+IMAGES:
+- I used the lazy loading thing on the images
+- I used a jpg and i link address because they were the easies ones.
+- I used a @media to make sure it will react
+ 
+RESPONSIVE DESIGN:
+- Apart from what said above i also made it so what the user hovers over a link it will change colors so htye can see what they are clicking
+- Hover over the tab options and they should turn a light gray color.
+-->
+
+<!-- I used css variable to make an animation for the nav links on my site, i used animations to make a cool looking effect so the text hovers up when the user hovers over the links -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +27,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- I am using REM instead of pixels so the font size will adapt to the size of the screen its on.  -->
@@ -20,10 +37,10 @@
             <img class="menu" src="menu.png">
         </div>
         <ul class="nav-links">
-            <li class="header"><a href="/">Home</a></li>
-            <li class="header"><a href="/about">About</a></li>
-            <li class="header"><a href="/contact">Contact</a></li>
-            <li class="header"><a href="/info">FAQ</a></li>
+            <li class="header link"><a href="/">Home</a></li>
+            <li class="header link"><a href="/about">About</a></li>
+            <li class="header link"><a href="/contact">Contact</a></li>
+            <li class="header link"><a href="/info">FAQ</a></li>
         </ul>
     </nav>
 
@@ -31,11 +48,11 @@
 
     <h1 class="header">Homepage</h1>
 
-    <p class="content">This is my homepage. Welcome to my website!</p>
+    <p>This is my homepage. Welcome to my website!</p>
 
-    <img class="home" src="https://upload.wikimedia.org/wikipedia/commons/2/22/GABRIEL_VELLA_vs_ROMINHO_51.jpg">
+    <img class="home" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/22/GABRIEL_VELLA_vs_ROMINHO_51.jpg">
 
-    <footer class="content">No way! You found this! I'm so proud!</footer>
+    <footer>No way! You found this! I'm so proud!</footer>
     <script>
         function toggleMenu() {
             document.querySelector('.nav-links').classList.toggle('active');
